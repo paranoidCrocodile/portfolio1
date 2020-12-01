@@ -1,0 +1,25 @@
+//variables
+$dark-mode: #20232a;
+
+//mixins
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin inline-block($height: auto, $width: auto) {
+  display: inline-block;
+  height: $height;
+  width: $width;
+}
+
+@mixin border() {
+  border: 1px black solid;
+}
+
+@mixin media-m {
+  @media screen and (max-width: 800px) {
+    @content;
+  }
+}

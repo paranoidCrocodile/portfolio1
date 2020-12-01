@@ -1,0 +1,146 @@
+@import "../../scss/config";
+
+.header {
+  width: 99vw;
+  height: 3rem;
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  @include center;
+  transition: transform 0.2s ease-in-out;
+  font-family: "Lato", "sans-serif";
+
+  &.hide{
+    transform: translateY(-75px);
+  }
+
+  &-menu {
+    display: flex;
+    height: 100%;
+
+    li {
+      @include inline-block;
+    }
+
+    a,
+    .header-button {
+      text-decoration: none;
+      @include inline-block;
+      padding: 1rem;
+      color: darken(#fff, 100%);
+      cursor: pointer;
+
+      &:hover {
+        background-color: darken(#fff, 10%);
+      }
+
+      &:active {
+        color: darken(#fff, 100%);
+      }
+    }
+  }
+
+  &-separator {
+    width: 65%;
+  }
+
+  &-logo {
+    background-color: #fff;
+    padding: 1rem 1rem;
+  }
+
+  &-menu-btn {
+    display: none;
+    min-width: 1.25rem;
+    cursor: pointer;
+  }
+}
+
+.dark-mode {
+  .header {
+    &-logo,
+    &-separator,
+    & {
+      color: #fff;
+      background-color: $dark-mode;
+    }
+
+    &-menu {
+      background-color: $dark-mode;
+      &-button,
+      &-menu-button,
+      .header-button,
+      & a,
+      & li {
+        color: #fff;
+        background-color: $dark-mode;
+      }
+
+      & a:hover,
+      .header-button:hover {
+        background-color: lighten($dark-mode, 10%);
+      }
+    }
+
+    &-menu-btn {
+      background-color: $dark-mode;
+      color: #fff;
+      &:hover {
+        background-color: lighten($dark-mode, 10%);
+      }
+    }
+  }
+}
+
+@include media-m {
+  .header {
+    &.hide{
+      transform: translateY(-500px);
+    }
+
+    &-logo {
+      flex-grow: 10;
+      z-index: 3;
+    }
+
+    &-separator {
+      display: none;
+    }
+
+    &-menu {
+      z-index: 2;
+      display: block;
+      position: absolute;
+      height: 50px;
+      width: 100vw;
+      background-color: #fff;
+      transform: translate(-35px, -388px);
+      transition: transform 0.2s ease-in-out;
+
+      &.showMenu {
+        transform: translate(-1px, 62px);
+      }
+
+      li,
+      .header-button {
+        display: block;
+        width: 100%;
+        text-align: center;
+        background-color: #fff;
+      }
+      
+      a {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    &-menu-btn {
+      z-index: 3;
+      text-decoration: none;
+      @include inline-block;
+      padding: 1rem;
+      color: darken(#fff, 100%);
+    }
+  }
+}

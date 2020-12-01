@@ -1,0 +1,73 @@
+@use "sass:color";
+@import "../../scss/config";
+
+.front {
+  height: 92.23vh;
+  width: 99vw;
+  background-image: linear-gradient(#fff, rgba(0, 0, 0, 0), #ccc),
+    url("../../assets/img/front_cover_white.jpg");
+
+  background: {
+    repeat: no-repeat;
+    position: center;
+    size: cover;
+  }
+
+  &-card {
+    margin-left: 10%;
+    margin-right: 40%;
+    height: 92.23vh;
+    padding-top: 10rem;
+
+    h1 {
+      font-family: "Roboto";
+      font-size: 4.5rem;
+    }
+
+    p {
+      font-family: "Lato";
+      font-size: 1.5rem;
+    }
+
+    .btn {
+      font-family: "Lato";
+      @include inline-block(1rem, 6rem);
+      text-align: center;
+      padding: 1rem;
+      margin-right: 1rem;
+      margin-top: 1rem;
+      background-color: rgba(0, 0, 0, 0.25);
+      color: black;
+    }
+  }
+}
+
+.front.dark-mode {
+  background-image: linear-gradient($dark-mode, rgba(0, 0, 0, 0), $dark-mode),
+    url("../../assets/img/front_cover_black.jpg");
+  background: {
+    repeat: no-repeat;
+    position: center;
+    size: cover;
+  }
+
+  .front-card {
+    .btn {
+      background-color: color.scale($dark-mode, $alpha: -15%);
+      color: #fff;
+    }
+  }
+}
+
+@include media-m {
+  .front {
+    &-card {
+      margin-left: 10%;
+      margin-right: 0;
+
+      h1{
+        font-size: 3.5rem;
+      }
+    }
+  }
+}

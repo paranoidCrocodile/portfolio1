@@ -1,0 +1,16 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": { "jsx": true }
+  },
+  "plugins": ["react"],
+  "rules": {
+    "no-unused-vars": "off",
+    "comma-dangle": 0
+  },
+  "extends": "eslint:recommended",
+  "env": {
+    "browser": true,
+    "node": true
+  }
+}

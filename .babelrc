@@ -1,0 +1,5 @@
+{
+  "presets": ["@babel/preset-react"],
+  //use the preset for react, see: https://babeljs.io/docs/en/babel-preset-react.html
+  "plugins": ["@babel/plugin-proposal-class-properties"]
+}
