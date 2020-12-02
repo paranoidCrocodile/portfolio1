@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 import { StyleProvider } from "./components/context/context";
 import { $ } from "./components/util";
-import "./reset.scss";
+import "./scss/global.scss";
 
 //components
 import Header from "./components/header/header";
 import Front from "./components/front/front";
 import Card from "./components/card";
 import Education from "./components/education/education";
+import Experience from "./components/experience/experience";
 
 export default class App extends Component {
   constructor(props) {
@@ -54,6 +55,7 @@ export default class App extends Component {
           <Header />
           <Front />
           <Education />
+          <Experience />
           <Card />
         </StyleProvider>
       </div>

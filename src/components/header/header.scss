@@ -29,6 +29,7 @@
       color: darken(#fff, 100%);
       cursor: pointer;
 
+
       &:hover {
         background-color: darken(#fff, 10%);
       }
@@ -109,11 +110,11 @@
       height: 50px;
       width: 100vw;
       background-color: #fff;
-      transform: translate(-35px, -388px);
+      transform: translate(0px, -388px);
       transition: transform 0.2s ease-in-out;
 
       &.showMenu {
-        transform: translate(-1px, 62px);
+        transform: translate(0px, 62px);
       }
 
       li,
@@ -125,7 +126,7 @@
       }
       
       .btn {
-        width: 100%;
+        width: 96%;
         text-align: center;
       }
     }

@@ -14,8 +14,10 @@ $dark-mode: #20232a;
   width: $width;
 }
 
-@mixin border() {
-  border: 1px black solid;
+@mixin media-xs{
+  @media screen and (max-width: 350px){
+    @content;
+  }
 }
 
 
@@ -33,6 +35,12 @@ $dark-mode: #20232a;
 
 @mixin media-l{
   @media screen and (max-width: 1000px){
+    @content;
+  }
+}
+
+@mixin media-xl{
+  @media screen and (max-width: 1200px){
     @content;
   }
 }

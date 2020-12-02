@@ -18,7 +18,6 @@ export default function Header() {
 
   const smoothScroll = (e) => {
     $(".header").classList.replace("show", "hide");
-
     scroll({
       top: $(`.${e.target.classList[0]}:not(.btn)`).offsetTop,
       behavior: "smooth"

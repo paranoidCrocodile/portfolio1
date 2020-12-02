@@ -1,0 +1,47 @@
+@use "sass:color";
+@import "../../scss/config";
+
+.experience {
+  &-title {
+    font-size: 3rem;
+    font-family: "Roboto", "sans-serif";
+    margin-left: 10%;
+  }
+
+  &-card {
+    max-width: 33.33%;
+    min-width: 225px;
+    padding: 1rem;
+    transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out;
+
+    &:hover {
+      transform: scale(1.25, 1.25);
+      background-color: lighten($dark-mode, 10%);
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      font-family: "Roboto", "sans-serif";
+      margin-left: 0.5rem;
+      @include inline-block;
+    }
+    .icon {
+      @include inline-block(1.5rem, 1.5rem);
+    }
+
+    &-container {
+      display: flex;
+      margin: 2.5rem 10%;
+      justify-content: space-around;
+    }
+
+    ul {
+      font-family: "Lato", "sans-serif";
+      margin-top: 1rem;
+    }
+
+    li {
+      margin-top: 0.25rem;
+    }
+  }
+}
