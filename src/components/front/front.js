@@ -11,7 +11,7 @@ export default function Front() {
         <h1>Hello, I'm Croc!</h1>
         <p>A web developer for hire!</p>
         <Button className="btn resume" children="My Resume"/>
-        <a className="btn contacts">Contact Me</a>
+        <Button children="Contact me"/>
       </div>
     </div>
   );

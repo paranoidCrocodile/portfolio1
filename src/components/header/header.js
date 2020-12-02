@@ -16,34 +16,49 @@ export default function Header() {
   const { isDark, changeTheme } = useContext(StyleContext);
   const [showMenu, toggleMenu] = useState(true);
 
-  const hideMenu = () => $(".header").classList.replace("show", "hide");
+  const smoothScroll = (e) => {
+    $(".header").classList.replace("show", "hide");
+
+    scroll({
+      top: $(`.${e.target.classList[0]}:not(.btn)`).offsetTop,
+      behavior: "smooth"
+    });
+  };
 
   return (
     <header className={isDark ? "header dark-mode show" : "header show"}>
       <div className="header-logo">
-        <FontAwesomeIcon icon={faCode}/>
+        <FontAwesomeIcon icon={faCode} />
       </div>
       <div className="header-separator"></div>
       <ul className="header-menu">
         <li>
-          <a href="#education" onClick={() => hideMenu()}>
-            Education
-          </a>
+          <Button
+            className="education"
+            children="Education"
+            onClick={(e) => smoothScroll(e)}
+          />
         </li>
         <li>
-          <a href="#Experience" onClick={() => hideMenu()}>
-            Experience
-          </a>
+          <Button
+            className="experience"
+            children="Experience"
+            onClick={(e) => smoothScroll(e)}
+          />
         </li>
         <li>
-          <a href="#Projects" onClick={() => hideMenu()}>
-            Projects
-          </a>
+          <Button
+            className="projects"
+            children="Projects"
+            onClick={(e) => smoothScroll(e)}
+          />
         </li>
         <li>
-          <a href="#Contacts" onClick={() => hideMenu()}>
-            Contacts
-          </a>
+          <Button
+            className="contacts"
+            children="Contacts"
+            onClick={(e) => smoothScroll(e)}
+          />
         </li>
         <Button className="header-button" onClick={() => changeTheme()}>
           <FontAwesomeIcon icon={isDark ? faMoon : faSun} />

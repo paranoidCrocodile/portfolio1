@@ -18,8 +18,21 @@ $dark-mode: #20232a;
   border: 1px black solid;
 }
 
+
+@mixin media-s{
+  @media screen and (max-width: 600px){
+    @content;
+  }
+}
+
 @mixin media-m {
   @media screen and (max-width: 800px) {
+    @content;
+  }
+}
+
+@mixin media-l{
+  @media screen and (max-width: 1000px){
     @content;
   }
 }

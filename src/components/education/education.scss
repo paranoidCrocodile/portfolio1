@@ -1,0 +1,87 @@
+@import "../../scss/config";
+.education {
+  &-title {
+    font-size: 3rem;
+    font-family: "Roboto";
+    margin: 1rem 0 1rem 10%;
+  }
+
+  &-card-container {
+    margin: 2.5rem 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &-card {
+    @include inline-block(500px, 30%);
+    max-width: 33.33%;
+    min-width: 225px;
+
+    .icon {
+      display: block;
+      margin: auto;
+      justify-content: center;
+      font-size: 8rem;
+    }
+    h1 {
+      font-family: "Roboto";
+      font-size: 1.5rem;
+      text-align: center;
+      margin: 1rem 0;
+    }
+    p {
+      font-family: "Lato";
+      font-size: 0.75rem;
+      text-align: center;
+
+      &.date {
+        margin: 1rem 0;
+        font-size: 1rem;
+        font-style: italic;
+      }
+    }
+  }
+}
+
+@include media-l {
+  .education {
+    &-title {
+      margin-left: 10%;
+    }
+
+    &-card {
+      margin: 0;
+      .icon {
+        font-size: 4rem;
+      }
+
+      h1{
+        font-size: 1rem;
+      }
+
+      .desc, .date{
+        font-size: 0.7rem;
+      }
+    }
+  }
+}
+
+@include media-m {
+  .education {
+    &-title {
+      margin: auto;
+      text-align: center;
+      font-size: 2.5rem;
+    }
+
+    &-card {
+      margin: auto;
+
+      &-container {
+        flex-direction: column;
+        margin: 1rem 0 1rem 0;
+      }
+    }
+  }
+}

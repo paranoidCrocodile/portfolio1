@@ -7,6 +7,7 @@ import "./reset.scss";
 import Header from "./components/header/header";
 import Front from "./components/front/front";
 import Card from "./components/card";
+import Education from "./components/education/education";
 
 export default class App extends Component {
   constructor(props) {
@@ -52,6 +53,7 @@ export default class App extends Component {
         >
           <Header />
           <Front />
+          <Education />
           <Card />
         </StyleProvider>
       </div>
