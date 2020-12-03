@@ -1,0 +1,20 @@
+@import "../../scss/config";
+
+.projects {
+  &-title {
+    margin-left: 10%;
+    font-size: 3rem;
+    font-family: "Roboto", "Lato";
+  }
+
+  &-card {
+    @include inline-block(225px, 225px);
+    border: 1px white solid;
+    &-container {
+      display: flex;
+      flex-direction: row;
+      align-content: space-around;
+      margin: 1rem 10% 1rem 10%;
+    }
+  }
+}

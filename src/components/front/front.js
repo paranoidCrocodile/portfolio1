@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import Button from "../button/button";
 import "./front.scss";
 import StyleContext from "../context/context";
-import { $ } from "../util";
+import { scrollTo } from "../util";
 
 export default function Front() {
   const { isDark } = useContext(StyleContext);
@@ -14,13 +14,8 @@ export default function Front() {
         <Button className="btn resume" children="My Resume" />
         <Button
           children="Contact me"
-          onClick={() =>
-            scroll({
-              top: $(".contacts:not(.btn)").offsetTop,
-              behavior: "smooth"
-            })
-          }
-        />
+          onClick={() => scrollTo(".contacts:not(.btn)")}
+          />
       </div>
     </div>
   );

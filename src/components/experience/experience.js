@@ -1,15 +1,25 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./experience.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faWindowMaximize, faServer, faTools} from "@fortawesome/free-solid-svg-icons";
+import {
+  faWindowMaximize,
+  faServer,
+  faTools
+} from "@fortawesome/free-solid-svg-icons";
+import StyleContext from "../context/context";
 
 export default function Experience() {
+  const { isDark } = useContext(StyleContext);
+  const sortBy = (e) => {
+    if(e.target.localName != "li") return;
+  }
+
   return (
-    <div className="experience">
+    <div className={isDark ? "experience dark-mode" : "experience"}>
       <h1 className="experience-title">Experience</h1>
-      <div className="experience-card-container">
+      <div className="experience-card-container" onClick={(e) => sortBy(e)}>
         <div className="experience-card frontend">
-          <FontAwesomeIcon icon={faWindowMaximize} className="icon"/>
+          <FontAwesomeIcon icon={faWindowMaximize} className="icon" />
           <h1>Frontend</h1>
           <ul>
             <li>JavaScript</li>
@@ -20,14 +30,14 @@ export default function Experience() {
           </ul>
         </div>
         <div className="experience-card backend">
-          <FontAwesomeIcon icon={faServer} className="icon"/>
+          <FontAwesomeIcon icon={faServer} className="icon" />
           <h1>Backend</h1>
           <ul>
             <li>Node.js</li>
           </ul>
         </div>
         <div className="experience-card tools">
-          <FontAwesomeIcon icon={faTools} className="icon"/>
+          <FontAwesomeIcon icon={faTools} className="icon" />
           <h1>Tools</h1>
           <ul>
             <li>Git</li>

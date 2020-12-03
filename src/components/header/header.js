@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import StyleContext from "../context/context";
 import "./header.scss";
 import Button from "../button/button";
-import { $ } from "../util";
+import { $, scrollTo } from "../util";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faTimes,
@@ -18,10 +18,7 @@ export default function Header() {
 
   const smoothScroll = (e) => {
     $(".header").classList.replace("show", "hide");
-    scroll({
-      top: $(`.${e.target.classList[0]}:not(.btn)`).offsetTop,
-      behavior: "smooth"
-    });
+    scrollTo(`.${e.target.classList[0]}:not(.btn)`);
   };
 
   return (

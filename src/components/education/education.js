@@ -7,7 +7,7 @@ import {
   faKeyboard
 } from "@fortawesome/free-solid-svg-icons";
 
-export default function Education() {
+export default function Education() { 
   return (
     <div className="education">
       <h1 className="education-title">Education</h1>

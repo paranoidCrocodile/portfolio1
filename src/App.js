@@ -9,6 +9,7 @@ import Front from "./components/front/front";
 import Card from "./components/card";
 import Education from "./components/education/education";
 import Experience from "./components/experience/experience";
+import Projects from "./components/projects/projects";
 
 export default class App extends Component {
   constructor(props) {
@@ -56,6 +57,7 @@ export default class App extends Component {
           <Front />
           <Education />
           <Experience />
+          <Projects />
           <Card />
         </StyleProvider>
       </div>

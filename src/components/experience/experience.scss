@@ -16,7 +16,7 @@
 
     &:hover {
       transform: scale(1.25, 1.25);
-      background-color: lighten($dark-mode, 10%);
+      background-color: darken(#fff, 10%);
     }
 
     h1 {
@@ -42,6 +42,47 @@
 
     li {
       margin-top: 0.25rem;
+    }
+  }
+}
+
+.experience.dark-mode{
+  .experience-card:hover{
+    background-color: lighten($dark-mode, 10%);
+  }
+}
+
+@include media-m{
+  .experience{
+    &-title{
+      margin: auto;
+      text-align: center;
+      font-size: 2.5rem
+    }
+
+    &-card{
+      margin: auto;
+
+      &-container{
+        flex-direction: column;
+        margin: 1rem 0 1rem 0;
+      }
+    }
+  }
+}
+
+@include media-s {
+  .experience{
+    &-title{
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@include media-xs {
+  .experience{
+    &-title{
+      font-size: 1rem;
     }
   }
 }
