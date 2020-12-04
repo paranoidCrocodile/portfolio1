@@ -1,0 +1,6 @@
+@import "../../scss/config";
+
+.btn {
+  @include mainFont;
+  cursor: pointer;
+}

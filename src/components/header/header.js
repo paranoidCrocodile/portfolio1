@@ -36,11 +36,6 @@ export default function Header() {
           onClick={(e) => smoothScroll(e)}
         />
         <Button
-          className="experience"
-          children="Experience"
-          onClick={(e) => smoothScroll(e)}
-        />
-        <Button
           className="projects"
           children="Projects"
           onClick={(e) => smoothScroll(e)}
@@ -61,7 +56,7 @@ export default function Header() {
           toggleMenu(!showMenu);
         }}
       >
-        <Icon hoverable={true} icon={showMenu ? faTimes : faBars}/>
+        <Icon hoverable={true} icon={showMenu ? faBars : faTimes}/>
       </Button>
     </header>
   );

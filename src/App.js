@@ -8,7 +8,6 @@ import Header from "./components/header/header";
 import Front from "./components/front/front";
 import Card from "./components/card";
 import Education from "./components/education/education";
-import Experience from "./components/experience/experience";
 import Projects from "./components/projects/projects";
 
 export default class App extends Component {
@@ -16,32 +15,26 @@ export default class App extends Component {
     super(props);
     this.state = {
       isDark: false,
-      scrollY: 50,
-      header: null,
-      front: null
     };
   }
 
-  menuScroll = () => {
+  menuScroll = (e) =>
     //hide/show menu menu scroll
     replaceClass({
       elem: this.state.header,
       trueClass: "hide",
       falseClass: "show",
-      condFunc: () => window.scrollY > this.state.scrollY
+      condFunc: () => e.deltaY > 0
     });
-    this.setState({ scrollY: window.scrollY });
-  };
 
   componentDidMount() {
     const darkPref = window.matchMedia("(prefers-color-scheme: dark)");
     this.setState({ isDark: darkPref.matches });
 
     //hide/show menu when scrolled
-    window.addEventListener("scroll", this.menuScroll);
+    window.addEventListener("wheel", (e) => this.menuScroll(e));
     //store .header into state
     this.setState({ header: $(".header") });
-    this.setState({ front: $(".front") });
   }
 
   changeTheme = () => {
@@ -57,7 +50,6 @@ export default class App extends Component {
           <Header />
           <Front />
           <Education />
-          <Experience />
           <Projects />
           <Card />
         </StyleProvider>

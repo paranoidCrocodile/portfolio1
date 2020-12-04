@@ -37,7 +37,6 @@
     padding: 1rem;
     margin-right: 1rem;
     margin-top: 1rem;
-    @include mainFont;
   }
 }
 
@@ -100,7 +99,7 @@
   .front {
     &-card {
       h1 {
-        font-size: 1.8rem;
+        font-size: 1.25rem;
       }
       p {
         font-size: 1rem;
