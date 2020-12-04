@@ -1,5 +1,5 @@
 import React from "react";
-import "./experience2.scss";
+import "./experience.scss";
 import Icon from "../icon/icon";
 import {
   faWindowMaximize,

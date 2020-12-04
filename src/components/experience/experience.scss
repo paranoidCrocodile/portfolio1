@@ -3,9 +3,8 @@
 
 .experience {
   &-title {
-    font-size: 3rem;
-    font-family: "Roboto", "sans-serif";
     margin-left: 10%;
+    @include mainFont(3rem);
   }
 
   &-card {
@@ -14,17 +13,20 @@
     padding: 1rem;
     transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out;
 
+    * {
+      background-color: rgba(0, 0, 0, 0);
+    }
+
     &:hover {
       transform: scale(1.25, 1.25);
-      background-color: darken(#fff, 10%);
     }
 
     h1 {
-      font-size: 1.5rem;
-      font-family: "Roboto", "sans-serif";
+      @include mainFont(1.5rem);
       margin-left: 0.5rem;
       @include inline-block;
     }
+
     .icon {
       @include inline-block(1.5rem, 1.5rem);
     }
@@ -36,34 +38,28 @@
     }
 
     ul {
-      font-family: "Lato", "sans-serif";
       margin-top: 1rem;
     }
 
     li {
       margin-top: 0.25rem;
+      @include secFont;
     }
   }
 }
 
-.experience.dark-mode{
-  .experience-card:hover{
-    background-color: lighten($dark-mode, 10%);
-  }
-}
-
-@include media-m{
-  .experience{
-    &-title{
+@include media-m {
+  .experience {
+    &-title {
       margin: auto;
       text-align: center;
-      font-size: 2.5rem
+      font-size: 2.5rem;
     }
 
-    &-card{
+    &-card {
       margin: auto;
 
-      &-container{
+      &-container {
         flex-direction: column;
         margin: 1rem 0 1rem 0;
       }
@@ -72,16 +68,16 @@
 }
 
 @include media-s {
-  .experience{
-    &-title{
+  .experience {
+    &-title {
       font-size: 1.5rem;
     }
   }
 }
 
 @include media-xs {
-  .experience{
-    &-title{
+  .experience {
+    &-title {
       font-size: 1rem;
     }
   }
