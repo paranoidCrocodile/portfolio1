@@ -3,7 +3,7 @@ import StyleContext from "../context/context";
 import "./header.scss";
 import Button from "../button/button";
 import { $, scrollTo } from "../util";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Icon from "../icon/icon";
 import {
   faTimes,
   faSun,
@@ -18,46 +18,40 @@ export default function Header() {
 
   const smoothScroll = (e) => {
     $(".header").classList.replace("show", "hide");
+    $(".header-menu").classList.toggle("showMenu");
+    toggleMenu(!showMenu);
     scrollTo(`.${e.target.classList[0]}:not(.btn)`);
   };
 
   return (
-    <header className={isDark ? "header dark-mode show" : "header show"}>
+    <header className="header show">
       <div className="header-logo">
-        <FontAwesomeIcon icon={faCode} />
+        <Icon icon={faCode} />
       </div>
       <div className="header-separator"></div>
       <ul className="header-menu">
-        <li>
-          <Button
-            className="education"
-            children="Education"
-            onClick={(e) => smoothScroll(e)}
-          />
-        </li>
-        <li>
-          <Button
-            className="experience"
-            children="Experience"
-            onClick={(e) => smoothScroll(e)}
-          />
-        </li>
-        <li>
-          <Button
-            className="projects"
-            children="Projects"
-            onClick={(e) => smoothScroll(e)}
-          />
-        </li>
-        <li>
-          <Button
-            className="contacts"
-            children="Contacts"
-            onClick={(e) => smoothScroll(e)}
-          />
-        </li>
+        <Button
+          className="education"
+          children="Education"
+          onClick={(e) => smoothScroll(e)}
+        />
+        <Button
+          className="experience"
+          children="Experience"
+          onClick={(e) => smoothScroll(e)}
+        />
+        <Button
+          className="projects"
+          children="Projects"
+          onClick={(e) => smoothScroll(e)}
+        />
+        <Button
+          className="contacts"
+          children="Contacts"
+          onClick={(e) => smoothScroll(e)}
+        />
         <Button className="header-button" onClick={() => changeTheme()}>
-          <FontAwesomeIcon icon={isDark ? faMoon : faSun} />
+          <Icon hoverable={true} icon={isDark ? faMoon : faSun}/>
         </Button>
       </ul>
       <Button
@@ -67,7 +61,7 @@ export default function Header() {
           toggleMenu(!showMenu);
         }}
       >
-        <FontAwesomeIcon icon={showMenu ? faBars : faTimes} />
+        <Icon hoverable={true} icon={showMenu ? faTimes : faBars}/>
       </Button>
     </header>
   );

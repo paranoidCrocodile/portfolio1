@@ -1,16 +1,14 @@
 @import "../../scss/config";
 
+//common style
 .header {
-  width: 99vw;
   height: 3rem;
-  background-color: #fff;
   position: sticky;
   top: 0;
   @include center;
   transition: transform 0.2s ease-in-out;
-  font-family: "Lato", "sans-serif";
 
-  &.hide{
+  &.hide {
     transform: translateY(-75px);
   }
 
@@ -22,30 +20,20 @@
       @include inline-block;
     }
 
+    ul,
     .btn {
       text-decoration: none;
       @include inline-block;
       padding: 1rem;
-      color: darken(#fff, 100%);
       cursor: pointer;
-
-
-      &:hover {
-        background-color: darken(#fff, 10%);
-      }
-
-      &:active {
-        color: darken(#fff, 100%);
-      }
     }
   }
-
+  
   &-separator {
     width: 65%;
   }
 
   &-logo {
-    background-color: #fff;
     padding: 1rem 1rem;
   }
 
@@ -56,41 +44,10 @@
   }
 }
 
-.dark-mode {
-  .header {
-    &-logo,
-    &-separator,
-    & {
-      color: #fff;
-      background-color: $dark-mode;
-    }
-
-    &-menu {
-      background-color: $dark-mode;
-      .btn {
-        color: #fff;
-        background-color: $dark-mode;
-      }
-
-      & a:hover,
-      .header-button:hover {
-        background-color: lighten($dark-mode, 10%);
-      }
-    }
-
-    &-menu-btn {
-      background-color: $dark-mode;
-      color: #fff;
-      &:hover {
-        background-color: lighten($dark-mode, 10%);
-      }
-    }
-  }
-}
-
+//media queries
 @include media-m {
   .header {
-    &.hide{
+    &.hide {
       transform: translateY(-500px);
     }
 
@@ -105,28 +62,21 @@
 
     &-menu {
       z-index: 2;
-      display: block;
+      display: flex;
+      flex-direction: column;
       position: absolute;
-      height: 50px;
+      height: 388px;
       width: 100vw;
-      background-color: #fff;
-      transform: translate(0px, -388px);
+      transform: translateY(-388px);
       transition: transform 0.2s ease-in-out;
 
       &.showMenu {
-        transform: translate(0px, 62px);
+        transform: translateY(227px);
       }
 
       li,
-      .header-button {
-        display: block;
-        width: 100%;
-        text-align: center;
-        background-color: #fff;
-      }
-      
+      .header-button,
       .btn {
-        width: 96%;
         text-align: center;
       }
     }

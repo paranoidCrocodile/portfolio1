@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { StyleProvider } from "./components/context/context";
-import { $ } from "./components/util";
+import { $, replaceClass } from "./components/util";
 import "./scss/global.scss";
 
 //components
@@ -24,11 +24,12 @@ export default class App extends Component {
 
   menuScroll = () => {
     //hide/show menu menu scroll
-    this.state.header.classList.replace(
-      ...(window.scrollY > this.state.scrollY
-        ? ["show", "hide"]
-        : ["hide", "show"])
-    );
+    replaceClass({
+      elem: this.state.header,
+      trueClass: "hide",
+      falseClass: "show",
+      condFunc: () => window.scrollY > this.state.scrollY
+    });
     this.setState({ scrollY: window.scrollY });
   };
 
@@ -49,7 +50,7 @@ export default class App extends Component {
 
   render() {
     return (
-      <div className={this.state.isDark ? "dark-mode" : null}>
+      <div className={this.state.isDark ? "dark-mode" : "white-mode"}>
         <StyleProvider
           value={{ isDark: this.state.isDark, changeTheme: this.changeTheme }}
         >

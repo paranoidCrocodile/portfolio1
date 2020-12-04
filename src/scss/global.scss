@@ -1,12 +1,21 @@
 @import "./config";
 
 //global style
+h1 {
+  font-family: "Roboto", "sans-serif";
+}
+
+p,
+.btn {
+  font-family: "Lato", "sans-serif";
+}
+
 :root {
   font-size: 25px;
   user-select: none;
 }
 
-body{
+body {
   overflow-x: hidden;
   width: 100%;
   height: 100%;
@@ -14,13 +23,38 @@ body{
   padding: 0px;
 }
 
-.dark-mode {
-  background-color: $dark-mode;
-  color: #fff;
+.header,
+.front,
+.experience,
+.project,
+.education,
+:root,
+body {
+  width: 100vw;
 }
 
-.hide {
-  display: none;
+.dark-mode {
+  background-color: $dark-mode;
+  color: lighten($dark-mode, 100%);
+  * {
+    background-color: $dark-mode;
+    color: lighten($dark-mode, 100%);
+  }
+  .hoverable:hover {
+    background-color: lighten($dark-mode, 10%);
+  }
+}
+
+.white-mode {
+  background-color: $white-mode;
+  color: darken($white-mode, 100%);
+  * {
+    background-color: $white-mode;
+    color: darken($white-mode, 100%);
+  }
+  .hoverable:hover {
+    background-color: darken($white-mode, 10%);
+  }
 }
 
 //reset

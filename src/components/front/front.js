@@ -7,7 +7,7 @@ import { scrollTo } from "../util";
 export default function Front() {
   const { isDark } = useContext(StyleContext);
   return (
-    <div className={isDark ? "front dark-mode" : "front"}>
+    <div className="front">
       <div className="front-card">
         <h1>Hello, I'm Croc!</h1>
         <p>A web developer for hire!</p>

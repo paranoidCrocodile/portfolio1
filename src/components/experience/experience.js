@@ -15,7 +15,7 @@ export default function Experience() {
   }
 
   return (
-    <div className={isDark ? "experience dark-mode" : "experience"}>
+    <div className="experience">
       <h1 className="experience-title">Experience</h1>
       <div className="experience-card-container" onClick={(e) => sortBy(e)}>
         <div className="experience-card frontend">

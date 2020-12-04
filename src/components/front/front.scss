@@ -3,11 +3,8 @@
 
 .front {
   height: 92.23vh;
-  width: 99vw;
+  width: 100vw;
   margin: 0;
-  background-image: linear-gradient(#fff, rgba(0, 0, 0, 0), #fff),
-    url("../../assets/img/front_cover_white.jpg");
-
   background: {
     repeat: no-repeat;
     position: center;
@@ -20,42 +17,49 @@
     height: 92.23vh;
     padding-top: 10rem;
 
-    h1 {
-      font-family: "Roboto", "sans-serif";
-      font-size: 3rem;
+    &,
+    & * {
+      background-color: rgba(0, 0, 0, 0);
     }
+  }
 
-    p {
-      font-family: "Lato", "sans-serif";
-      font-size: 1.5rem;
-    }
+  h1 {
+    font-size: 3rem;
+    font-family: "Roboto", "sans-serif";
+  }
 
+  p {
+    font-size: 1.5rem;
+    font-family: "Lato", "sans-serif";
+  }
+
+  .btn {
+    @include inline-block(1rem, 6rem);
+    text-align: center;
+    padding: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+  }
+}
+
+.dark-mode .front {
+  background-image: linear-gradient($dark-mode, rgba(0, 0, 0, 0), $dark-mode),
+    url("../../assets/img/front_cover_black.jpg");
+
+  &-card {
     .btn {
-      font-family: "Lato", "sans-serif";
-      @include inline-block(1rem, 6rem);
-      text-align: center;
-      padding: 1rem;
-      margin-right: 1rem;
-      margin-top: 1rem;
-      background-color: rgba(0, 0, 0, 0.25);
-      color: black;
+      background-color: color.scale($dark-mode, $alpha: -15%);
     }
   }
 }
 
-.front.dark-mode {
-  background-image: linear-gradient($dark-mode, rgba(0, 0, 0, 0), $dark-mode),
-    url("../../assets/img/front_cover_black.jpg");
-  background: {
-    repeat: no-repeat;
-    position: center;
-    size: cover;
-  }
+.white-mode .front {
+  background-image: linear-gradient($white-mode, rgba(0, 0, 0, 0), $white-mode),
+    url("../../assets/img/front_cover_white.jpg");
 
-  .front-card {
+  &-card {
     .btn {
-      background-color: color.scale($dark-mode, $alpha: -15%);
-      color: #fff;
+      background-color: color.scale($dark-mode, $alpha: -50%);
     }
   }
 }
@@ -82,7 +86,7 @@
         font-size: 2rem;
       }
 
-      p{
+      p {
         font-size: 1.25rem;
       }
       .btn {
@@ -94,15 +98,15 @@
 }
 
 @include media-s {
-  .front{
-    &-card{
-      h1{
+  .front {
+    &-card {
+      h1 {
         font-size: 1.8rem;
       }
-      p{
+      p {
         font-size: 1rem;
       }
-      .btn{
+      .btn {
         font-size: 0.8rem;
         padding: 0.8rem 0;
       }
@@ -110,13 +114,13 @@
   }
 }
 
-@include media-xs{
-  .front{
-    &-card{
-      h1{
+@include media-xs {
+  .front {
+    &-card {
+      h1 {
         font-size: 1rem;
       }
-      p{
+      p {
         font-size: 0.75rem;
       }
     }
