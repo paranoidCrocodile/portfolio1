@@ -1,19 +1,19 @@
 import React from "react";
 import "./education.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Icon from "../icon/icon";
 import {
   faTrophy,
   faGraduationCap,
   faKeyboard
 } from "@fortawesome/free-solid-svg-icons";
 
-export default function Education() { 
+export default function Education() {
   return (
     <div className="education">
       <h1 className="education-title">Education</h1>
       <div className="education-card-container">
         <div className="education-card">
-          <FontAwesomeIcon icon={faGraduationCap} className="icon" />
+          <Icon icon={faGraduationCap} />
           <h1>
             Lorem Ipsum dolor
             <p className="date">2015-2020</p>
@@ -24,7 +24,7 @@ export default function Education() {
           </h1>
         </div>
         <div className="education-card">
-          <FontAwesomeIcon icon={faTrophy} className="icon" />
+          <Icon icon={faTrophy} />
           <h1>
             Lorem Ipsum dolor
             <p className="date">2020</p>
@@ -35,7 +35,7 @@ export default function Education() {
           </h1>
         </div>
         <div className="education-card">
-          <FontAwesomeIcon icon={faKeyboard} className="icon" />
+          <Icon icon={faKeyboard} />
           <h1>
             Lorem Ipsum dolor
             <p className="date">2021 - </p>

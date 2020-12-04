@@ -26,6 +26,7 @@
       @include inline-block;
       padding: 1rem;
       cursor: pointer;
+      @include mainFont;
     }
   }
   

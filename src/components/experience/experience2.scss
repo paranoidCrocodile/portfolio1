@@ -1,0 +1,84 @@
+@use "sass:color";
+@import "../../scss/config";
+
+.experience {
+  &-title {
+    margin-left: 10%;
+    @include mainFont(3rem);
+  }
+
+  &-card {
+    max-width: 33.33%;
+    min-width: 225px;
+    padding: 1rem;
+    transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out;
+
+    * {
+      background-color: rgba(0, 0, 0, 0);
+    }
+
+    &:hover {
+      transform: scale(1.25, 1.25);
+    }
+
+    h1 {
+      @include mainFont(1.5rem);
+      margin-left: 0.5rem;
+      @include inline-block;
+    }
+
+    .icon {
+      @include inline-block(1.5rem, 1.5rem);
+    }
+
+    &-container {
+      display: flex;
+      margin: 2.5rem 10%;
+      justify-content: space-around;
+    }
+
+    ul {
+      margin-top: 1rem;
+    }
+
+    li {
+      margin-top: 0.25rem;
+      @include secFont;
+    }
+  }
+}
+
+@include media-m {
+  .experience {
+    &-title {
+      margin: auto;
+      text-align: center;
+      font-size: 2.5rem;
+    }
+
+    &-card {
+      margin: auto;
+
+      &-container {
+        flex-direction: column;
+        margin: 1rem 0 1rem 0;
+      }
+    }
+  }
+}
+
+@include media-s {
+  .experience {
+    &-title {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@include media-xs {
+  .experience {
+    &-title {
+      font-size: 1rem;
+    }
+  }
+}

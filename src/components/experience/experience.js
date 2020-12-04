@@ -1,15 +1,13 @@
-import React, { useContext } from "react";
-import "./experience.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from "react";
+import "./experience2.scss";
+import Icon from "../icon/icon";
 import {
   faWindowMaximize,
   faServer,
   faTools
 } from "@fortawesome/free-solid-svg-icons";
-import StyleContext from "../context/context";
 
 export default function Experience() {
-  const { isDark } = useContext(StyleContext);
   const sortBy = (e) => {
     if(e.target.localName != "li") return;
   }
@@ -18,8 +16,8 @@ export default function Experience() {
     <div className="experience">
       <h1 className="experience-title">Experience</h1>
       <div className="experience-card-container" onClick={(e) => sortBy(e)}>
-        <div className="experience-card frontend">
-          <FontAwesomeIcon icon={faWindowMaximize} className="icon" />
+        <div className="experience-card frontend hoverable">
+          <Icon icon={faWindowMaximize}/>
           <h1>Frontend</h1>
           <ul>
             <li>JavaScript</li>
@@ -29,15 +27,15 @@ export default function Experience() {
             <li>jQuery</li>
           </ul>
         </div>
-        <div className="experience-card backend">
-          <FontAwesomeIcon icon={faServer} className="icon" />
+        <div className="experience-card backend hoverable">
+          <Icon icon={faServer}/>
           <h1>Backend</h1>
           <ul>
             <li>Node.js</li>
           </ul>
         </div>
-        <div className="experience-card tools">
-          <FontAwesomeIcon icon={faTools} className="icon" />
+        <div className="experience-card tools hoverable">
+          <Icon icon={faTools}/>
           <h1>Tools</h1>
           <ul>
             <li>Git</li>
