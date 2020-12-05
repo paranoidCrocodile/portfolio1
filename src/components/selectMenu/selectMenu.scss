@@ -2,21 +2,20 @@
 
 .selectMenu {
   width: 80%;
-  background-color: #ccc;
   transition: height 0.5s ease-in-out;
   display: flex;
-  flex-direction: column;
   align-content: space-around;
   margin: auto;
 
   .btn {
     text-align: center;
     padding: 1rem 0 1rem 0;
+    width: 17%;
     transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
   }
 
   &.show {
-    height: 450px;
+    height: 75px;
   }
 
   &.hide {
@@ -24,6 +23,10 @@
     * {
       background-color: rgba(0, 0, 0, 0);
       color: rgba(0, 0, 0, 0);
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0);
+      }
     }
   }
 }

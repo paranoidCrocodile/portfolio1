@@ -11,6 +11,7 @@ import {
   faBars,
   faCode
 } from "@fortawesome/free-solid-svg-icons";
+import { header } from "../../config.json";
 
 export default function Header() {
   const { isDark, changeTheme } = useContext(StyleContext);
@@ -30,23 +31,16 @@ export default function Header() {
       </div>
       <div className="header-separator"></div>
       <ul className="header-menu">
-        <Button
-          className="education"
-          children="Education"
-          onClick={(e) => smoothScroll(e)}
-        />
-        <Button
-          className="projects"
-          children="Projects"
-          onClick={(e) => smoothScroll(e)}
-        />
-        <Button
-          className="contacts"
-          children="Contacts"
-          onClick={(e) => smoothScroll(e)}
-        />
+        {header.buttons.map((button) => (
+          <Button
+            className={button.className}
+            children={button.children}
+            key={button.className}
+            onClick={(e) => smoothScroll(e)}
+          />
+        ))}
         <Button className="header-button" onClick={() => changeTheme()}>
-          <Icon hoverable={true} icon={isDark ? faMoon : faSun}/>
+          <Icon hoverable={true} icon={isDark ? faMoon : faSun} />
         </Button>
       </ul>
       <Button
@@ -56,7 +50,7 @@ export default function Header() {
           toggleMenu(!showMenu);
         }}
       >
-        <Icon hoverable={true} icon={showMenu ? faBars : faTimes}/>
+        <Icon hoverable={true} icon={showMenu ? faBars : faTimes} />
       </Button>
     </header>
   );

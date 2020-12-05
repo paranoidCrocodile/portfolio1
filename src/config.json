@@ -1,0 +1,74 @@
+{
+  "front": {
+    "title": "Hello! I'm Croc!",
+    "subtitle": "A web deveoper for hire!"
+  },
+  "header": {
+    "buttons": [
+      {
+        "className": "education",
+        "children": "Education"
+      },
+      {
+        "className": "projects",
+        "children": "Projects"
+      },
+      {
+        "className": "contacts",
+        "children": "Contacts"
+      }
+    ]
+  },
+  "education": {
+    "title": "Education",
+    "cards": [
+      {
+        "title": "Lorem Ipsum dolor",
+        "icon": "faGraduationCap",
+        "date": "2015-2020",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus dolor, vero architecto."
+      },
+      {
+        "title": "Lorem Ipsum dolor",
+        "icon": "faTrophy",
+        "date": "2020",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus dolor, vero architecto."
+      },
+      {
+        "title": "Lorem Ipsum dolor",
+        "icon": "faKeyboard",
+        "date": "2021-",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus dolor, vero architecto."
+      }
+    ]
+  },
+  "projects": {
+    "title": "Projects",
+    "cards": [
+      {
+        "name": "portfolio1",
+        "description": "my first portfolio",
+        "repoLink": "https://github.com/paranoidCrocodile/portfolio1",
+        "demoLink": "https://paranoidcrocodile.github.io/portfolio1/dist/index.html",
+        "img": "portfolio1_thumbnail.jpg",
+        "category": ["HTML", "Sass", "React"]
+      },
+      {
+        "name": "portfolio1",
+        "description": "my first portfolio",
+        "repoLink": "https://github.com/paranoidCrocodile/portfolio1",
+        "demoLink": "https://paranoidcrocodile.github.io/portfolio1/dist/index.html",
+        "img": "portfolio1_thumbnail.jpg",
+        "category": ["HTML", "Sass", "React2"]
+      },
+      {
+        "name": "portfolio1",
+        "description": "my first portfolio",
+        "repoLink": "https://github.com/paranoidCrocodile/portfolio1",
+        "demoLink": "https://paranoidcrocodile.github.io/portfolio1/dist/index.html",
+        "img": "portfolio1_thumbnail.jpg",
+        "category": ["HTML", "Sass", "React3"]
+      }
+    ]
+  }
+}

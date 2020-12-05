@@ -1,11 +1,15 @@
 import React from "react";
 import "./selectMenu.scss";
 import Button from "../button/button";
+import { $ } from "../util";
 
 export default function SelectMenu(props) {
-  const filterBy = (e) => {
-    console.log(e.target.classList[0]);
-  };
+  const filterBy = (e) =>
+    props.onSort(
+      $(".projects-sort .selectMenu").classList.contains("hide")
+        ? "hidden"
+        : e.target.classList[0]
+    );
 
   return (
     <div className="selectMenu hide">

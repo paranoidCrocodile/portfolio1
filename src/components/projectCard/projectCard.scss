@@ -1,0 +1,27 @@
+@use "sass:color";
+@import "../../scss/config";
+
+.projects-card {
+  border: 1px white solid;
+
+  img{
+    width: 100%;
+  }
+
+  &-caption-container{
+    position: absolute;
+    transform: translateY(-75px);
+
+    &, & *{
+      background-color: #ccc;
+    }
+
+    h1{
+      @include mainFont();
+    }
+
+    p{
+      @include secFont(0.75rem);
+    }
+  }
+}

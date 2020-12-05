@@ -6,24 +6,19 @@
     @include mainFont(3rem);
   }
 
-  &-card {
-    @include inline-block(225px, 225px);
-    border: 1px white solid;
-
-    &-container {
-      display: flex;
-      flex-direction: row;
-      align-content: space-around;
-      margin: 1rem 10% 1rem 10%;
-      z-index: 2;
-    }
+  &-card-container{
+    width: 80%;
+    margin: 1rem auto 1rem auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
   }
 
-  &-sort > .btn{
+  &-sort > .btn {
     @include inline-block(1rem, 3rem);
     text-align: center;
     padding: 1rem 0 1rem 0;
-    margin-left: 10%;
+    margin: 1rem 0 1rem 10%;
     cursor: pointer;
   }
 }
