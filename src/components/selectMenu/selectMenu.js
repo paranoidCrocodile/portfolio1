@@ -4,12 +4,11 @@ import Button from "../button/button";
 import { $ } from "../util";
 
 export default function SelectMenu(props) {
-  const filterBy = (e) =>
+  const filterBy = (e) => {
     props.onSort(
-      $(".projects-sort .selectMenu").classList.contains("hide")
-        ? "hidden"
-        : e.target.classList[0]
+      $(".selectMenu").classList.contains("hide") ? null : e.target.classList[0]
     );
+  };
 
   return (
     <div className="selectMenu hide">

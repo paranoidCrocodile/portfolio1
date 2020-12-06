@@ -50,8 +50,43 @@
         "repoLink": "https://github.com/paranoidCrocodile/portfolio1",
         "demoLink": "https://paranoidcrocodile.github.io/portfolio1/dist/index.html",
         "img": "portfolio1_thumbnail.jpg",
-        "category": ["HTML", "Sass", "React"]
+        "category": ["HTML", "CSS", "JS", "React"]
       }
     ]
+  },
+  "contactData": {
+    "title": "Contacts",
+    "contactInfo": [
+      {
+        "className": "name",
+        "value": "John Doe",
+        "icon": "faSignature"
+      },
+      {
+        "className": "phoneNumber",
+        "value": "+886 123 456 789",
+        "icon": "faPhone"
+      },
+      {
+        "className": "email",
+        "value": "example@domain.com",
+        "icon": "faEnvelope"
+      },
+      {
+        "className": "placeOfResidence",
+        "value": "Madeup Blvd. 1234, San Francisco 94016, California US",
+        "icon": "faHouse"
+      }
+    ]
+  },
+  "footer": {
+    "copyRight": "Copyright © CROCODILE",
+    "social": {
+      "gitHub": "https://github.com/",
+      "stackOverflow": "https://stackoverflow.com/",
+      "linkedIn": "https://www.linkedin.com/",
+      "facebook": "https://www.facebook.com/",
+      "twitter": "https://twitter.com/"
+    }
   }
 }

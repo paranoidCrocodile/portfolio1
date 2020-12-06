@@ -6,10 +6,10 @@ import "./scss/global.scss";
 //components
 import Header from "./components/header/header";
 import Front from "./components/front/front";
-import Card from "./components/card";
 import Education from "./components/education/education";
 import Projects from "./components/projects/projects";
 import Contacts from "./components/contacts/contacts";
+import Footer from "./components/footer/footer";
 
 export default class App extends Component {
   constructor(props) {
@@ -56,6 +56,7 @@ export default class App extends Component {
           <Education />
           <Projects />
           <Contacts />
+          <Footer />
         </StyleProvider>
       </div>
     );

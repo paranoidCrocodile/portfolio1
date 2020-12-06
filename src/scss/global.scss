@@ -24,6 +24,10 @@ body {
   width: 100vw;
 }
 
+.hoverable{
+  @include transit(background-color, 0.25s);
+}
+
 .dark-mode {
   background-color: $dark-mode;
   color: set-text-color($dark-mode);
