@@ -11,10 +11,10 @@ import "./projects.scss";
 export default function Projects() {
   const sortMenu = () => {
     replaceClass({
-      elem: $(".projects-sort .selectMenu"),
+      elem: $(".selectMenu"),
       trueClass: "show",
       falseClass: "hide",
-      condFunc: () => $(".projects-sort .selectMenu").classList.contains("hide")
+      condFunc: () => $(".selectMenu").classList.contains("hide")
     });
     changeMenu(!showMenu);
   };
