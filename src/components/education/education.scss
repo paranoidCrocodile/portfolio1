@@ -1,4 +1,5 @@
 @import "../../scss/config";
+
 .education {
   &-title {
     @include mainFont(3rem);
@@ -52,11 +53,12 @@
         font-size: 4rem;
       }
 
-      h1{
+      h1 {
         font-size: 1rem;
       }
 
-      .desc, .date{
+      .desc,
+      .date {
         font-size: 0.7rem;
       }
     }
@@ -83,16 +85,16 @@
 }
 
 @include media-s {
-  .education{
-    &-title{
+  .education {
+    &-title {
       font-size: 1.5rem;
     }
   }
 }
 
 @include media-xs {
-  .education{
-    &-title{
+  .education {
+    &-title {
       font-size: 1rem;
     }
   }

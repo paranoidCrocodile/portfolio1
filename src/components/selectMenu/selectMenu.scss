@@ -30,3 +30,17 @@
     }
   }
 }
+
+@include media-m {
+  .selectMenu {
+    flex-direction: column;
+
+    &.show {
+      height: 450px;
+    }
+
+    .btn {
+      width: 100%;
+    }
+  }
+}

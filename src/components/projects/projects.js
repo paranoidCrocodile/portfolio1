@@ -29,15 +29,13 @@ export default function Projects() {
   return (
     <div className="projects">
       <h1 className="projects-title">Projects</h1>
-      <div className="projects-sort">
-        <Button onClick={() => sortMenu()}>
-          <Icon icon={showMenu ? faTimes : faFilter} hoverable={true} />
-        </Button>
-        <SelectMenu
-          options={["HTML", "CSS", "JS", "React", "jQuery", "NodeJS"]}
-          onSort={sortBy}
-        />
-      </div>
+      <Button onClick={() => sortMenu()}>
+        <Icon icon={showMenu ? faTimes : faFilter} hoverable={true} />
+      </Button>
+      <SelectMenu
+        options={["HTML", "CSS", "JS", "React", "jQuery", "NodeJS"]}
+        onSort={sortBy}
+      />
       <div className="projects-card-container">
         {projects.cards.map((card) => (
           <ProjectCard

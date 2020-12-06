@@ -2,23 +2,65 @@
 
 .projects {
   &-title {
-    margin-left: 10%;
+    margin: 2.5rem 0 0 10%;
     @include mainFont(3rem);
   }
 
-  &-card-container{
+  &-card-container {
     width: 80%;
     margin: 1rem auto 1rem auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 1rem;
   }
 
-  &-sort > .btn {
+  .btn {
     @include inline-block(1rem, 3rem);
     text-align: center;
     padding: 1rem 0 1rem 0;
     margin: 1rem 0 1rem 10%;
     cursor: pointer;
+  }
+}
+
+@include media-xl {
+  .projects {
+    &-card-container {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+}
+
+@include media-l {
+  .projects {
+    &-card-container {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+@include media-m {
+  .projects {
+    &-title {
+      margin: 2.5rem auto 1rem auto;
+      text-align: center;
+      @include mainFont(3rem);
+    }
+    &-card-container {
+      grid-template-columns: 1fr;
+      max-width: 300px;
+    }
+
+    .btn {
+      margin: 0% 30% 0 40%;
+    }
+  }
+}
+
+@include media-s {
+  .projects {
+    &-title {
+      font-size: 1.5rem;
+    }
   }
 }

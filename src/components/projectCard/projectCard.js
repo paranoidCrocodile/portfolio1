@@ -9,15 +9,14 @@ export default function ProjectCard(props) {
 
   return (
     <div className={"projects-card " + props.category.join(" ")}>
-      <img src={getImage(`./${props.img}`)}/>
-      <div className="projects-card-caption-container">
-        <h1>{props.name}</h1>
-        <p>{props.description}</p>
+      <h1>{props.name}</h1>
+      <img src={getImage(`./${props.img}`)} />
+      <div className="links-container">
         <a href={props.repoLink} className="repo" target="_blank">
-          <Icon icon={faGithub} />
+          <Icon icon={faGithub} hoverable={true} />
         </a>
         <a href={props.demoLink} className="demo" target="_blank">
-          <Icon icon={faLaptopCode} />
+          <Icon icon={faLaptopCode} hoverable={true} />
         </a>
       </div>
     </div>

@@ -1,6 +1,7 @@
 //variables
 $dark-mode: #20232a;
 $white-mode: #ffffff;
+$animation-duration: 0.5s;
 
 //mixins
 @mixin center {
@@ -15,25 +16,36 @@ $white-mode: #ffffff;
   width: $width;
 }
 
-@mixin mainFont($size: 1rem){
+@mixin mainFont($size: 1rem) {
   font-family: "Roboto", "sans-serif";
   font-size: $size;
 }
 
-@mixin secFont($size: 1rem){
+@mixin secFont($size: 1rem) {
   font-family: "Lato", "sans-serif";
   font-size: $size;
 }
 
-@mixin media-xs{
-  @media screen and (max-width: 350px){
+@mixin transit($property, $duration : $animation_duration){
+  transition: $property $duration ease-in-out;
+}
+
+@function set-text-color($color) {
+  @if (lightness($color) > 40%) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+
+@mixin media-xs {
+  @media screen and (max-width: 350px) {
     @content;
   }
 }
 
-
-@mixin media-s{
-  @media screen and (max-width: 600px){
+@mixin media-s {
+  @media screen and (max-width: 600px) {
     @content;
   }
 }
@@ -44,14 +56,14 @@ $white-mode: #ffffff;
   }
 }
 
-@mixin media-l{
-  @media screen and (max-width: 1000px){
+@mixin media-l {
+  @media screen and (max-width: 1000px) {
     @content;
   }
 }
 
-@mixin media-xl{
-  @media screen and (max-width: 1200px){
+@mixin media-xl {
+  @media screen and (max-width: 1200px) {
     @content;
   }
 }

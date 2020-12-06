@@ -26,10 +26,10 @@ body {
 
 .dark-mode {
   background-color: $dark-mode;
-  color: lighten($dark-mode, 100%);
+  color: set-text-color($dark-mode);
   * {
     background-color: $dark-mode;
-    color: lighten($dark-mode, 100%);
+    color: set-text-color($dark-mode);
   }
   .hoverable:hover {
     background-color: lighten($dark-mode, 10%);
@@ -38,13 +38,13 @@ body {
 
 .white-mode {
   background-color: $white-mode;
-  color: darken($white-mode, 100%);
-  * {
+  color: set-text-color($white-mode);
+  *{
     background-color: $white-mode;
-    color: darken($white-mode, 100%);
+    color: set-text-color($white-mode)
   }
   .hoverable:hover {
-    background-color: darken($white-mode, 10%);
+    background-color: lighten($white-mode, 10%);
   }
 }
 

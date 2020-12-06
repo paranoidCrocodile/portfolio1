@@ -46,28 +46,11 @@
     "title": "Projects",
     "cards": [
       {
-        "name": "portfolio1",
-        "description": "my first portfolio",
+        "name": "Portfolio1",
         "repoLink": "https://github.com/paranoidCrocodile/portfolio1",
         "demoLink": "https://paranoidcrocodile.github.io/portfolio1/dist/index.html",
         "img": "portfolio1_thumbnail.jpg",
         "category": ["HTML", "Sass", "React"]
-      },
-      {
-        "name": "portfolio1",
-        "description": "my first portfolio",
-        "repoLink": "https://github.com/paranoidCrocodile/portfolio1",
-        "demoLink": "https://paranoidcrocodile.github.io/portfolio1/dist/index.html",
-        "img": "portfolio1_thumbnail.jpg",
-        "category": ["HTML", "Sass", "React2"]
-      },
-      {
-        "name": "portfolio1",
-        "description": "my first portfolio",
-        "repoLink": "https://github.com/paranoidCrocodile/portfolio1",
-        "demoLink": "https://paranoidcrocodile.github.io/portfolio1/dist/index.html",
-        "img": "portfolio1_thumbnail.jpg",
-        "category": ["HTML", "Sass", "React3"]
       }
     ]
   }

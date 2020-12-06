@@ -1,27 +1,71 @@
-@use "sass:color";
 @import "../../scss/config";
 
 .projects-card {
-  border: 1px white solid;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
 
-  img{
+  img {
     width: 100%;
   }
 
-  &-caption-container{
+  h1 {
+    @include mainFont(1rem);
+    margin: 1rem 0 1rem 0;
+  }
+  &::after {
+    content: "";
     position: absolute;
-    transform: translateY(-75px);
+    top: 100%;
+    left: 0;
+    height: 50%;
+    width: 100%;
+    opacity: 0;
+    @include transit(all);
+  }
 
-    &, & *{
-      background-color: #ccc;
+  &:hover {
+    &::after {
+      top: 50%;
+      opacity: 1;
     }
 
-    h1{
-      @include mainFont();
-    }
-
-    p{
-      @include secFont(0.75rem);
+    .links-container a,
+    .links-container .icon {
+      opacity: 1;
     }
   }
+
+  .links-container {
+    position: absolute;
+    top: 75%;
+    height: 25%;
+    width: 100%;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0);
+
+    a,
+    .icon {
+      opacity: 0;
+      color: set-text-color($dark-mode);
+      background-color: rgba(0, 0, 0, 0);
+      @include transit(all);
+
+      &:hover {
+        color: set-text-color(set-text-color($dark-mode));
+      }
+    }
+  }
+}
+
+.dark-mode .projects-card::after {
+  background: linear-gradient(rgba(0, 0, 0, 0), lighten($dark-mode, 10%));
+}
+
+.white-mode .projects-card::after {
+  background: linear-gradient(rgba(0, 0, 0, 0), darken($white-mode, 10%));
 }

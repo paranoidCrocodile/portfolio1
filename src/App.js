@@ -9,7 +9,7 @@ import Front from "./components/front/front";
 import Card from "./components/card";
 import Education from "./components/education/education";
 import Projects from "./components/projects/projects";
-import { faBoxTissue } from "@fortawesome/free-solid-svg-icons";
+import Contacts from "./components/contacts/contacts";
 
 export default class App extends Component {
   constructor(props) {
@@ -55,7 +55,7 @@ export default class App extends Component {
           <Front />
           <Education />
           <Projects />
-          <Card />
+          <Contacts />
         </StyleProvider>
       </div>
     );

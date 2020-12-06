@@ -7,6 +7,7 @@
   top: 0;
   @include center;
   transition: transform 0.2s ease-in-out;
+  z-index: 10;
 
   &.hide {
     transform: translateY(-75px);
@@ -27,7 +28,7 @@
       padding: 1rem;
     }
   }
-  
+
   &-separator {
     width: 75%;
   }
@@ -39,7 +40,6 @@
   &-menu-btn {
     display: none;
     min-width: 1.25rem;
-    cursor: pointer;
   }
 }
 
