@@ -30,20 +30,18 @@ export default function Projects() {
 
   useEffect(() => {
     sorted
-      ? $$(".projects-card").forEach((card) => {
-          let clsList = card.classList;
-          console.log(sortKey);
-          clsList.contains(sortKey)
-            ? clsList.remove("hide")
-            : clsList.add("hide");
-        })
+      ? $$(".projects-card").forEach((card) =>
+          card.classList.contains(sortKey)
+            ? card.classList.remove("hide")
+            : card.classList.add("hide")
+        )
       : null;
     sortedRecently(false);
   });
 
   return (
     <div className="projects">
-      <h1 className="projects-title">Projects</h1>
+      <h1 className="projects-title">{projects.title}</h1>
       <Button onClick={() => sortMenu()}>
         <Icon icon={showMenu ? faTimes : faFilter} hoverable={true} />
       </Button>

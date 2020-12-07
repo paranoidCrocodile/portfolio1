@@ -35,9 +35,6 @@ body {
     background-color: $dark-mode;
     color: set-text-color($dark-mode);
   }
-  .hoverable:hover {
-    background-color: lighten($dark-mode, 10%);
-  }
 }
 
 .white-mode {
@@ -46,9 +43,6 @@ body {
   *{
     background-color: $white-mode;
     color: set-text-color($white-mode)
-  }
-  .hoverable:hover {
-    background-color: lighten($white-mode, 10%);
   }
 }
 

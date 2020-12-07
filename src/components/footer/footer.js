@@ -11,13 +11,14 @@ import {
   faTwitter
 } from "@fortawesome/free-brands-svg-icons";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
+import { scrollTo } from "../util";
 
 export default function Footer() {
   const { gitHub, stackOverflow, linkedIn, facebook, twitter } = footer.social;
   return (
     <footer className="footer">
-      <p>{footer.copyRight}</p>
-      <Button>
+      <p>{`${new Date().getFullYear()} ${footer.copyRight}`}</p>
+      <Button onClick={() => scrollTo(".front:not(.btn)")}>
         <Icon icon={faChevronUp} />
       </Button>
       <ul>
@@ -42,7 +43,7 @@ export default function Footer() {
           </a>
         </li>
         <li>
-          <a icon={twitter} target="_blank">
+          <a href={twitter} target="_blank">
             <Icon icon={faTwitter} />
           </a>
         </li>

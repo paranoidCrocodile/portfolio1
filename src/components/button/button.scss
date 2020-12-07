@@ -2,5 +2,9 @@
 
 .btn {
   @include mainFont;
+  @include transit(all, 0.25s);
   cursor: pointer;
+  &:hover{
+    background-color: $dark-mode-light;
+  }
 }

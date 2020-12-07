@@ -1,6 +1,8 @@
 //variables
 $dark-mode: #20232a;
+$dark-mode-light: lighten($dark-mode, 10%);
 $white-mode: #ffffff;
+$white-mode-dark: darken($white-mode, 10%);
 $animation-duration: 0.5s;
 
 //mixins

@@ -1,26 +1,56 @@
 @import "../../scss/config";
 
 .footer {
-  width: 80%;
+  width: 100%;
   padding: 100px 0 100px 0;
-  margin: 0 10% 0 10%;
+  margin: 0;
   display: flex;
 
-  *{
+  > *, li, li a {
     @include inline-block;
+    background-color: rgba(0,0,0,0);
   }
 
-  p{
-    flex: 4.5 4.5;
+  p {
+    flex: 4.5 4.5 80%;
+    text-align: center;
+    @include secFont;
   }
 
-  ul{
-    flex: 4.5 4.5;
-    li{
+  ul {
+    flex: 4.5 4.5 80%;
+    @include center;
+    li {
       margin-right: 1rem;
     }
   }
-  .btn{
+
+  .btn {
     flex: 1 1;
+  }
+}
+
+.dark-mode{
+  .footer{
+    background: linear-gradient($dark-mode, $dark-mode-light);
+  }
+}
+
+@include media-m {
+  .footer {
+    flex-direction: column;
+    > * {
+      margin-bottom: 1rem;
+    }
+    .btn {
+      order: 1;
+      padding: 0 50% 0 50%;
+    }
+    ul {
+      order: 2;
+    }
+    p {
+      order: 3;
+    }
   }
 }

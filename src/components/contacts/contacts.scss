@@ -36,3 +36,37 @@
     top: -1px;
   }
 }
+
+@include media-m{
+  .contacts{
+    &-title{
+      margin: 2rem auto 2rem auto;
+      text-align: center;
+      font-size: 2.5rem;
+    }
+
+    ul{
+      text-align: center;
+      .btn{
+        font-size: 0.75rem;
+      }
+    }
+  }
+}
+
+
+@include media-s {
+  .contacts {
+    &-title {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@include media-xs {
+  .contacts {
+    &-title {
+      font-size: 1rem;
+    }
+  }
+}
