@@ -36,6 +36,12 @@
   }
 }
 
+.white-mode{
+  .footer{
+    background: linear-gradient($white-mode, $white-mode-dark);
+  }
+}
+
 @include media-m {
   .footer {
     flex-direction: column;
@@ -51,6 +57,23 @@
     }
     p {
       order: 3;
+    }
+  }
+}
+
+@include media-s{
+  .footer{
+    p{
+      font-size: 0.75rem;
+    }
+  }
+}
+
+
+@include media-xs{
+  .footer{
+    p{
+      font-size: 0.5rem;
     }
   }
 }
