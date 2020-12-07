@@ -4,7 +4,16 @@
   @include mainFont;
   @include transit(all, 0.25s);
   cursor: pointer;
-  &:hover{
+}
+
+.dark-mode {
+  .btn:hover {
     background-color: $dark-mode-light;
+  }
+}
+
+.white-mode {
+  .btn:hover {
+    background-color: $white-mode-dark;
   }
 }
